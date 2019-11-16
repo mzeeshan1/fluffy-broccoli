@@ -1,0 +1,159 @@
+Checking for AVX support... AVX
+make -C main 
+Checking for AVX support... AVX
+make[1]: Entering directory `/root/nff-go/examples/dpi/main'
+go get -tags hyperscan_v4 -v github.com/flier/gohs/hyperscan
+go: finding github.com/flier/gohs/hyperscan latest
+go build -tags hyperscan_v4 dpi.go handlers.go
+# command-line-arguments
+/tmp/go-build454638137/b001/_x002.o: In function `rte_mempool_ops_enqueue_bulk':
+handlers.cgo2.c:(.text+0xec): undefined reference to `rte_mempool_ops_table'
+/tmp/go-build454638137/b001/_x002.o: In function `rte_pktmbuf_detach':
+handlers.cgo2.c:(.text+0x20b): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x2a0): undefined reference to `rte_mempool_ops_table'
+/tmp/go-build454638137/b001/_x002.o: In function `create_kni':
+handlers.cgo2.c:(.text+0x3cc): undefined reference to `rte_eth_dev_info_get'
+handlers.cgo2.c:(.text+0x41f): undefined reference to `rte_bus_find_by_device'
+handlers.cgo2.c:(.text+0x478): undefined reference to `rte_eth_macaddr_get'
+handlers.cgo2.c:(.text+0x484): undefined reference to `rte_eth_dev_get_mtu'
+handlers.cgo2.c:(.text+0x4d5): undefined reference to `rte_kni_alloc'
+/tmp/go-build454638137/b001/_x002.o: In function `checkRSSPacketCount':
+handlers.cgo2.c:(.text+0x52e): undefined reference to `rte_eth_dev_is_valid_port'
+handlers.cgo2.c:(.text+0x547): undefined reference to `rte_eth_devices'
+handlers.cgo2.c:(.text+0x586): undefined reference to `rte_eth_dev_logtype'
+handlers.cgo2.c:(.text+0x59d): undefined reference to `rte_log'
+/tmp/go-build454638137/b001/_x002.o: In function `check_port_rss':
+handlers.cgo2.c:(.text+0x5cd): undefined reference to `rte_eth_dev_info_get'
+/tmp/go-build454638137/b001/_x002.o: In function `check_port_tx':
+handlers.cgo2.c:(.text+0x5fd): undefined reference to `rte_eth_dev_info_get'
+/tmp/go-build454638137/b001/_x002.o: In function `port_init':
+handlers.cgo2.c:(.text+0x65f): undefined reference to `rte_eth_dev_info_get'
+handlers.cgo2.c:(.text+0x689): undefined reference to `rte_eth_dev_count'
+handlers.cgo2.c:(.text+0x6ea): undefined reference to `rte_eth_dev_configure'
+handlers.cgo2.c:(.text+0x712): undefined reference to `rte_eth_dev_socket_id'
+handlers.cgo2.c:(.text+0x729): undefined reference to `rte_eth_rx_queue_setup'
+handlers.cgo2.c:(.text+0x776): undefined reference to `rte_eth_dev_socket_id'
+handlers.cgo2.c:(.text+0x78a): undefined reference to `rte_eth_tx_queue_setup'
+handlers.cgo2.c:(.text+0x79c): undefined reference to `rte_eth_dev_start'
+handlers.cgo2.c:(.text+0x7b5): undefined reference to `rte_eth_promiscuous_enable'
+/tmp/go-build454638137/b001/_x002.o: In function `create_reassemble_table':
+handlers.cgo2.c:(.text+0x7f5): undefined reference to `rte_get_tsc_hz'
+handlers.cgo2.c:(.text+0x831): undefined reference to `rte_ip_frag_table_create'
+/tmp/go-build454638137/b001/_x002.o: In function `receiveRSS':
+handlers.cgo2.c:(.text+0x92c): undefined reference to `rte_eth_devices'
+handlers.cgo2.c:(.text+0xc1b): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0xcac): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0xdec): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0xece): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0xf08): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0xf6d): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0xfea): undefined reference to `per_lcore__lcore_id'
+/tmp/go-build454638137/b001/_x002.o: In function `nff_go_KNI':
+handlers.cgo2.c:(.text+0x10eb): undefined reference to `rte_kni_rx_burst'
+handlers.cgo2.c:(.text+0x10f7): undefined reference to `rte_kni_handle_request'
+handlers.cgo2.c:(.text+0x12a5): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x12e6): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x1373): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x1586): undefined reference to `rte_kni_tx_burst'
+handlers.cgo2.c:(.text+0x15e3): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x1625): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x16b6): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x1804): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x18e1): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x1919): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x199d): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x1a34): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x1b08): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x1b91): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x1be9): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x1c55): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x1d1c): undefined reference to `per_lcore__lcore_id'
+/tmp/go-build454638137/b001/_x002.o: In function `nff_go_send':
+handlers.cgo2.c:(.text+0x1f1f): undefined reference to `rte_eth_devices'
+handlers.cgo2.c:(.text+0x206b): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x20b0): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x213f): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x21af): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x228f): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x22c7): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x2345): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x242e): undefined reference to `per_lcore__lcore_id'
+/tmp/go-build454638137/b001/_x002.o: In function `nff_go_stop':
+handlers.cgo2.c:(.text+0x2690): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x26d0): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x2761): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x27fb): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x28d1): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x290d): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x299c): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x2a7f): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x2ae5): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x2bea): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x2cce): undefined reference to `rte_mempool_ops_table'
+/tmp/go-build454638137/b001/_x002.o: In function `directStop':
+handlers.cgo2.c:(.text+0x2dcf): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x2e2a): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x2ebf): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x2f5b): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x3015): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x3046): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x30ac): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x311f): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x328e): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x32f0): undefined reference to `rte_mempool_ops_table'
+/tmp/go-build454638137/b001/_x002.o: In function `directSend':
+handlers.cgo2.c:(.text+0x336b): undefined reference to `rte_eth_devices'
+handlers.cgo2.c:(.text+0x3403): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x3458): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x34da): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x356a): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x35f7): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x362e): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x36ab): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x3733): undefined reference to `per_lcore__lcore_id'
+/tmp/go-build454638137/b001/_x002.o: In function `eal_init':
+handlers.cgo2.c:(.text+0x37f7): undefined reference to `rte_eal_init'
+handlers.cgo2.c:(.text+0x3871): undefined reference to `rte_kni_init'
+/tmp/go-build454638137/b001/_x002.o: In function `allocateMbufs':
+handlers.cgo2.c:(.text+0x38aa): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x3a00): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x3ac4): undefined reference to `rte_mempool_ops_table'
+/tmp/go-build454638137/b001/_x002.o: In function `createMempool':
+handlers.cgo2.c:(.text+0x3c63): undefined reference to `rte_socket_id'
+handlers.cgo2.c:(.text+0x3c81): undefined reference to `rte_pktmbuf_pool_create'
+handlers.cgo2.c:(.text+0x3d5c): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x3db4): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x3e45): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x3edb): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x3fa4): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x3fd5): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x403c): undefined reference to `rte_mempool_ops_table'
+handlers.cgo2.c:(.text+0x40a9): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x41b2): undefined reference to `rte_exit'
+handlers.cgo2.c:(.text+0x4223): undefined reference to `per_lcore__lcore_id'
+handlers.cgo2.c:(.text+0x4285): undefined reference to `rte_mempool_ops_table'
+/tmp/go-build454638137/b001/_x002.o: In function `nff_go_ring_create':
+handlers.cgo2.c:(.text+0x434e): undefined reference to `rte_ring_create'
+/tmp/go-build454638137/b001/_x002.o: In function `lpm_create':
+handlers.cgo2.c:(.text+0x43a0): undefined reference to `rte_lpm_create'
+/tmp/go-build454638137/b001/_x002.o: In function `check_hwtxchecksum_capability':
+handlers.cgo2.c:(.text+0x440b): undefined reference to `rte_eth_dev_count'
+handlers.cgo2.c:(.text+0x442a): undefined reference to `rte_eth_dev_info_get'
+/tmp/go-build454638137/b001/_x002.o: In function `_cgo_766284effc53_Cfunc_rte_lcore_to_socket_id':
+handlers.cgo2.c:(.text+0x4470): undefined reference to `lcore_config'
+/tmp/go-build454638137/b001/_x002.o: In function `free_kni':
+handlers.cgo2.c:(.text+0x50f): undefined reference to `rte_kni_release'
+/tmp/go-build454638137/b001/_x002.o: In function `getMempoolSpace':
+handlers.cgo2.c:(.text+0x42d1): undefined reference to `rte_mempool_in_use_count'
+/tmp/go-build454638137/b001/_x002.o: In function `lpm_add':
+handlers.cgo2.c:(.text+0x43d4): undefined reference to `rte_lpm_add'
+/tmp/go-build454638137/b001/_x002.o: In function `lpm_delete':
+handlers.cgo2.c:(.text+0x43e4): undefined reference to `rte_lpm_delete'
+/tmp/go-build454638137/b001/_x002.o: In function `lpm_free':
+handlers.cgo2.c:(.text+0x43f1): undefined reference to `rte_lpm_free'
+/tmp/go-build454638137/b001/_x002.o: In function `rte_mempool_get_ops.part.2':
+handlers.cgo2.c:(.text.unlikely+0x143): undefined reference to `__rte_panic'
+collect2: error: ld returned 1 exit status
+make[1]: *** [dpi] Error 2
+make[1]: Leaving directory `/root/nff-go/examples/dpi/main'
+make: *** [main] Error 2
